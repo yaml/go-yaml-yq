@@ -686,6 +686,15 @@ make release VERSION=0.1.1
 start with `v`. The release target runs verification first, requires a clean
 working tree, and creates tag `v$(VERSION)`.
 
+## CI
+
+GitHub Actions runs tests, hygiene checks, example smoke tests, and CodeQL.
+Hygiene includes formatting, `go.mod`/`go.sum`, file lint, spelling, and
+forbidden dependency checks. The dependency check keeps pruned yq format adapter
+dependencies out of the module graph.
+
+Dependabot is configured for Go modules and GitHub Actions.
+
 ## Vendored Engine
 
 The expression engine is vendored from `github.com/mikefarah/yq`; see `Notice`.

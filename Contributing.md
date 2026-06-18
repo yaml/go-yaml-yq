@@ -63,7 +63,7 @@ working tree, and creates an annotated tag named `v0.1.1`.
 
 ## Commit Conventions
 
-- No merge commits.
+- Avoid merge commits.
 - Commit subject line should:
   - Start with a capital letter.
   - Not end with a period.

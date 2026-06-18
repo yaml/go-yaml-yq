@@ -27,3 +27,43 @@ jobs:
         run: |
           make tidy
           git diff --exit-code go.mod go.sum
+
+      - name: Check forbidden dependencies
+        run: |
+          module_re='^[A-Za-z0-9_.-]+(/[A-Za-z0-9_.-]+)+'
+          module_re+='([[:space:]]+v[0-9][^[:space:]]*)?$'
+          modules="$(make deps | grep -E "$module_re")"
+          printf '%s\n' "$modules"
+          forbidden='github.com/goccy/go-yaml'
+          forbidden+='|github.com/hashicorp/hcl'
+          forbidden+='|github.com/zclconf/go-cty'
+          forbidden+='|github.com/pelletier/go-toml'
+          forbidden+='|github.com/yuin/gopher-lua'
+          forbidden+='|github.com/go-ini/ini'
+          forbidden+='|github.com/magiconair/properties'
+          if printf '%s\n' "$modules" | grep -E "$forbidden"; then
+            echo "Forbidden dependency found in module graph" >&2
+            exit 1
+          fi
+
+  files:
+    name: file checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Actionlint
+        uses: raven-actions/actionlint@v2
+
+      - name: Yamllint
+        uses: ibiqlik/action-yamllint@v3
+
+      - name: ls-lint
+        uses: ls-lint/action@v2.3.1
+        with:
+          config: .ls-lint.yaml
+
+      - name: Typos
+        uses: crate-ci/typos@v1.47.2
