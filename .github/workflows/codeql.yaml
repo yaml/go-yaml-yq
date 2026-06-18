@@ -2,12 +2,11 @@ name: CodeQL
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
   workflow_dispatch:
   schedule:
-    - cron: '24 3 * * 1'
+    - cron: 24 3 * * 1
 
 permissions:
   actions: read
@@ -28,8 +27,14 @@ jobs:
             build-mode: autobuild
 
     steps:
-      - name: Check out repository
+      - name: Check out
         uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: stable
+          cache: true
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3

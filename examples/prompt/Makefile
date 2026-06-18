@@ -20,6 +20,6 @@ MAKES-CLEAN := $(BIN)
 build: $(GO)
 	go build -o $(BIN) .
 
-run:
+run: $(GO)
 	printf '$(INPUT)' | go run main.go $(FILE)
 	@echo
