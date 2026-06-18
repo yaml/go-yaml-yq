@@ -3,4 +3,4 @@ image: example/app:1.0
 replicas: 2
 env:
   LOG_LEVEL: info
-  FEATURE_FLAG: "false"
+  FEATURE_FLAG: 'false'

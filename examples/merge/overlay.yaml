@@ -4,4 +4,4 @@ labels:
   tier: worker
   release: stable
 env:
-  FEATURE_FLAG: "true"
+  FEATURE_FLAG: 'true'

@@ -2,7 +2,7 @@
 name: color-demo
 enabled: true
 replicas: 3
-image: "example/app:1.0"
+image: example/app-1.0
 labels:
   app: yaml-yq
   tier: demo

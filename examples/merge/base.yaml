@@ -6,4 +6,4 @@ labels:
   tier: api
 env:
   LOG_LEVEL: info
-  FEATURE_FLAG: "false"
+  FEATURE_FLAG: 'false'
