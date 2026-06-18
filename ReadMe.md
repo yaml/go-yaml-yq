@@ -674,18 +674,6 @@ make -C examples/prompt run
 make -C examples/color run
 ```
 
-## Release
-
-Create an annotated release tag with:
-
-```bash
-make release VERSION=0.1.1
-```
-
-`VERSION` is required, must be a semantic version like `0.1.1`, and must not
-start with `v`. The release target runs verification first, requires a clean
-working tree, and creates tag `v$(VERSION)`.
-
 ## CI
 
 GitHub Actions runs tests, hygiene checks, example smoke tests, and CodeQL.

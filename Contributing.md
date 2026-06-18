@@ -50,15 +50,19 @@ make -C examples/query run
 
 ## Release Tags
 
-Create a release tag with:
+Create a release with:
 
 ```sh
 make release VERSION=0.1.1
 ```
 
-`VERSION` is required, must not include a leading `v`, and must be a semantic
-version like `0.1.1`. The release target runs verification, requires a clean
-working tree, and creates an annotated tag named `v0.1.1`.
+`VERSION` is required and may be written as `0.1.1` or `v0.1.1`. The release
+target normalizes both forms to the tag `v0.1.1`, runs verification, requires a
+clean working tree, pushes the branch and tag to `origin`, and creates a GitHub
+release with generated notes.
+
+Run `make release` without `VERSION` to print the latest local release tag
+without changing anything.
 
 
 ## Commit Conventions
