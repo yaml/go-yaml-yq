@@ -1,11 +1,9 @@
 module github.com/yaml/go-yaml-yq
 
-go 1.23.0
-
-toolchain go1.23.12
+go 1.24
 
 require (
-	github.com/a8m/envsubst v1.4.2
+	github.com/a8m/envsubst v1.4.3
 	github.com/alecthomas/participle/v2 v2.1.4
 	github.com/dimchansky/utfbom v1.1.1
 	github.com/elliotchance/orderedmap v1.8.0
