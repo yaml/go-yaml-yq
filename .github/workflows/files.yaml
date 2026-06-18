@@ -1,0 +1,49 @@
+name: Files Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  actionlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Actionlint
+        uses: raven-actions/actionlint@v2
+
+  yamllint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Yamllint
+        uses: ibiqlik/action-yamllint@v3
+
+  ls-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: ls-lint
+        uses: ls-lint/action@v2.3.1
+        with:
+          config: .ls-lint.yaml
+
+  typos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Typos
+        uses: crate-ci/typos@v1.47.2

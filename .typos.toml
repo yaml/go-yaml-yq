@@ -1,0 +1,15 @@
+[files]
+extend-exclude = [
+	".cache",
+	"examples/color/color",
+	"examples/merge/merge",
+	"examples/prompt/prompt",
+	"examples/query/query",
+	"examples/update/update",
+]
+
+[default.extend-words]
+go-yaml = "go-yaml"
+go-yaml-dom = "go-yaml-dom"
+go-yaml-yq = "go-yaml-yq"
+yq = "yq"

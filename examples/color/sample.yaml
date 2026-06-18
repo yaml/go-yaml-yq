@@ -1,0 +1,13 @@
+# Rendered with ANSI colors by the color example.
+name: color-demo
+enabled: true
+replicas: 3
+image: "example/app:1.0"
+labels:
+  app: yaml-yq
+  tier: demo
+ports:
+  - name: http
+    port: 8080
+  - name: metrics
+    port: 9090

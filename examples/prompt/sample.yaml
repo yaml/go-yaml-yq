@@ -1,0 +1,8 @@
+project: go-yaml-yq
+version: prototype
+owners:
+  - yaml
+  - yq
+settings:
+  pure: true
+  format: yaml

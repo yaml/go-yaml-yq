@@ -1,0 +1,7 @@
+replicas: 3
+image: example/app:2.0
+labels:
+  tier: worker
+  release: stable
+env:
+  FEATURE_FLAG: "true"

@@ -1,0 +1,9 @@
+name: demo
+replicas: 2
+image: example/app:1.0
+labels:
+  app: yaml-yq
+  tier: api
+env:
+  LOG_LEVEL: info
+  FEATURE_FLAG: "false"

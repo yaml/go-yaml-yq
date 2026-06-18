@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo
+  labels:
+    app: yaml-yq
+data:
+  first: alpha
+  second: beta

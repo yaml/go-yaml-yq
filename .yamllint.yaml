@@ -1,0 +1,22 @@
+extends: default
+
+ignore: |
+  .cache/
+
+rules:
+  brackets:
+    min-spaces-inside: 0
+    max-spaces-inside: 1
+  document-start:
+    present: false
+  indentation:
+    spaces: 2
+    indent-sequences: false
+  line-length:
+    max: 100
+  truthy:
+    check-keys: false
+  quoted-strings:
+    check-keys: true
+    quote-type: single
+    required: only-when-needed

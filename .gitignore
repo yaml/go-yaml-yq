@@ -1,0 +1,7 @@
+.cache/
+*.swp
+.*.swp
+/examples/merge/merge
+/examples/prompt/prompt
+/examples/query/query
+/examples/update/update
