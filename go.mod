@@ -1,8 +1,6 @@
 module github.com/yaml/go-yaml-yq
 
-go 1.23.0
-
-toolchain go1.23.12
+go 1.25.0
 
 require (
 	github.com/a8m/envsubst v1.4.2
@@ -12,6 +10,6 @@ require (
 	github.com/goccy/go-json v0.10.6
 	github.com/jinzhu/copier v0.4.0
 	go.yaml.in/yaml/v4 v4.0.0-rc.5
-	golang.org/x/net v0.43.0
-	golang.org/x/text v0.28.0
+	golang.org/x/net v0.56.0
+	golang.org/x/text v0.38.0
 )
