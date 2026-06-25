@@ -11,7 +11,7 @@ require (
 	github.com/elliotchance/orderedmap v1.8.0
 	github.com/goccy/go-json v0.10.6
 	github.com/jinzhu/copier v0.4.0
-	go.yaml.in/yaml/v4 v4.0.0-rc.5
+	go.yaml.in/yaml/v4 v4.0.0-rc.6
 	golang.org/x/net v0.43.0
 	golang.org/x/text v0.28.0
 )
