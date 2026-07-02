@@ -66,4 +66,4 @@ jobs:
           config: .ls-lint.yaml
 
       - name: Typos
-        uses: crate-ci/typos@v1.47.2
+        uses: crate-ci/typos@v1.48.0
